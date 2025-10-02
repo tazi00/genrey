@@ -40,7 +40,7 @@ export default function SiteHeader() {
             aria-label="Home"
           >
             <span className="text-base font-semibold tracking-tight">
-              YourBrand
+              Genrey
             </span>
           </Link>
 
@@ -103,7 +103,7 @@ export default function SiteHeader() {
         id="mobile-sidebar"
         role="dialog"
         aria-modal="true"
-        className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[85%] bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white shadow-xl
+        className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[85%] bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white min-h-screen shadow-xl
           transition-transform duration-300 ${
             open ? "translate-x-0" : "-translate-x-full"
           }`}
@@ -114,9 +114,8 @@ export default function SiteHeader() {
             className="flex items-center gap-2"
             onClick={() => setOpen(false)}
           >
-            <img src="/logo.svg" alt="Brand logo" className="h-8 w-auto" />
-            <span className="text-base font-semibold tracking-tight">
-              YourBrand
+            <span className="text-base font-semibold tracking-tight text-background">
+              Genrey
             </span>
           </Link>
           <button
@@ -137,13 +136,13 @@ export default function SiteHeader() {
           </button>
         </div>
 
-        <nav className="px-2 py-4" aria-label="Mobile">
+        <nav className="px-2 py-4 bg-[#474747]" aria-label="Mobile">
           {NAV.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="block rounded-lg px-3 py-2 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/5"
+              className="block rounded-lg px-3 py-2 text-sm font-medium text-background hover:bg-black/5 dark:hover:bg-white/5"
             >
               {item.label}
             </a>
