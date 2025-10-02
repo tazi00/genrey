@@ -103,7 +103,7 @@ export default function SiteHeader() {
         id="mobile-sidebar"
         role="dialog"
         aria-modal="true"
-        className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[85%] bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white min-h-screen shadow-xl
+        className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[85%] bg-[#474747] text-neutral-900 dark:bg-neutral-900 dark:text-white min-h-screen shadow-xl
           transition-transform duration-300 ${
             open ? "translate-x-0" : "-translate-x-full"
           }`}
@@ -136,7 +136,7 @@ export default function SiteHeader() {
           </button>
         </div>
 
-        <nav className="px-2 py-4 bg-[#474747]" aria-label="Mobile">
+        <nav className="px-2 py-4 dark:bg-[#474747]" aria-label="Mobile">
           {NAV.map((item) => (
             <a
               key={item.href}
